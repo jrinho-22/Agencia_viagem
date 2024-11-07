@@ -31,18 +31,18 @@ AgenciaViagem.java
 
 Solução:
 
-AgenciaViagem.java
-    public class AgenciaViagem {
-        private static AgenciaViagem instance;
-        ...
-    
-    
-        public static AgenciaViagem getInstance(String nome, String endereco, String CEP, String CNPJ, String telefone, String email, String website, String horario_funcionamento) {
-            if (this.instance == null) {
-                this.instance = new AgenciaViagem(nome, endereco, CEP, CNPJ, telefone, email, website, horario_funcionamento);
+    AgenciaViagem.java
+        public class AgenciaViagem {
+            private static AgenciaViagem instance;
+            ...
+        
+        
+            public static AgenciaViagem getInstance(String nome, String endereco, String CEP, String CNPJ, String telefone, String email, String website, String horario_funcionamento) {
+                if (this.instance == null) {
+                    this.instance = new AgenciaViagem(nome, endereco, CEP, CNPJ, telefone, email, website, horario_funcionamento);
+                }
+                return this.instance;
             }
-            return this.instance;
-        }
 
 App.java
     AgenciaViagem agencia = AgenciaViagem.getInstance("nomeAgencia", "Rua Kennedy 232", "8105240", "40.224.145/0001-90", "41 9131-2245", "AgenciaViagem@gmail.com", 
