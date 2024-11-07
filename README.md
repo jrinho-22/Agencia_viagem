@@ -44,9 +44,9 @@ Solução:
                 return this.instance;
             }
 
-App.java
-    AgenciaViagem agencia = AgenciaViagem.getInstance("nomeAgencia", "Rua Kennedy 232", "8105240", "40.224.145/0001-90", "41 9131-2245", "AgenciaViagem@gmail.com", 
-    "AgenciaViagem.com.br", "8:00-5:30");
+    App.java
+        AgenciaViagem agencia = AgenciaViagem.getInstance("nomeAgencia", "Rua Kennedy 232", "8105240", "40.224.145/0001-90", "41 9131-2245", "AgenciaViagem@gmail.com", 
+        "AgenciaViagem.com.br", "8:00-5:30");
     
 
 2 - Na atual implementação,  a classe Reserva_passagem_aerea, possui dois métodos(getValor_ticket_adulto e Horariocomescala) que o resultado varia caso a passagem seja de ida ou de volta. O padrão de projeto bridge poderia se encaixar nesse cenário criando abstratas e implementação:
