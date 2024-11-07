@@ -261,6 +261,7 @@ Solução: O builder passaria esses argumentos de forma dinâmica. Isso permitir
     
 
 Utilização da classe:
+
     ReservaHospedagemBuilder builder = new ReservaHospedagemBuilder("John Doe", "john.doe@example.com", 2, 2);
     ReservaHospedagem reservaHospedagem = builder
     .setTelefoneContatoHospedeResponsavel("123456789")
