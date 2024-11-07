@@ -52,6 +52,7 @@ Solução:
 2 - Na atual implementação,  a classe Reserva_passagem_aerea, possui dois métodos(getValor_ticket_adulto e Horariocomescala) que o resultado varia caso a passagem seja de ida ou de volta. O padrão de projeto bridge poderia se encaixar nesse cenário criando abstratas e implementação:
 
 Implementação atual:
+
     public class Reserva_passagem_aerea extends Reserva {
         private String tipo;
         private int limite_escala_id = 3
@@ -104,8 +105,8 @@ Implementação atual:
         }
     }
 
-reserva_passagem_aerea_ida = new Reserva_passagem_aerea("ida", escala, cliente.getNome(), cliente.getEmail(),...)                        
-reserva_passagem_aerea_volta = new Reserva_passagem_aerea("volta", escala, cliente.getNome(), cliente.getEmail(), ...)                        
+    reserva_passagem_aerea_ida = new Reserva_passagem_aerea("ida", escala, cliente.getNome(), cliente.getEmail(),...)                        
+    reserva_passagem_aerea_volta = new Reserva_passagem_aerea("volta", escala, cliente.getNome(), cliente.getEmail(), ...)                        
 
 Solução: Criar duas classes que implementam a interface IPassagemAerea, dessa maneira separando abstração e implementação
 
@@ -139,6 +140,7 @@ Reserva_passagem_aerea.java
     
 
 Passagem_aerea_ida.java
+
     public class Passagem_aerea_ida implements IPassagemAerea {
     
     
@@ -203,7 +205,8 @@ Atual implementação:
         private LocalDate checkout;
     
     
-        public ReservaHospedagem(String nome_responsavel, String email_responsavel, int numero_de_adultos, int numero_de_criancas,String telefone_contato_hospede_responsavel, int precoDiaria, int numQuarto, String endereco, String nome_do_estabelecimento_da_hospedagem, String cidade, String pais, LocalDate checkin, LocalDate checkout) {
+        public ReservaHospedagem(String nome_responsavel, String email_responsavel, int numero_de_adultos, int numero_de_criancas,String telefone_contato_hospede_responsavel, int     
+        precoDiaria, int numQuarto, String endereco, String nome_do_estabelecimento_da_hospedagem, String cidade, String pais, LocalDate checkin, LocalDate checkout) {
             super(nome_responsavel, email_responsavel);
             this.telefone_contato_hospede_responsavel = telefone_contato_hospede_responsavel;
             this.precoDiaria = precoDiaria;
