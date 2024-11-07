@@ -6,7 +6,7 @@ Implementação atual:
 
 AgenciaViagem.java
 
-public class AgenciaViagem {
+    public class AgenciaViagem {
     private String nome;
     private String enderenco;
     private String CEP;
@@ -18,7 +18,7 @@ public class AgenciaViagem {
     private int numero_funcionarios;
 
 
-    public AgenciaViagem(String nome, String enderenco, String CEP, String    
+public AgenciaViagem(String nome, String enderenco, String CEP, String    
 CNPJ, String telefone, String email, String website, String horario_funcionamento) {
         this.nome = nome;
         this.enderenco = enderenco;
