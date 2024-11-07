@@ -45,6 +45,7 @@ Solução:
             }
 
     App.java
+    
         AgenciaViagem agencia = AgenciaViagem.getInstance("nomeAgencia", "Rua Kennedy 232", "8105240", "40.224.145/0001-90", "41 9131-2245", "AgenciaViagem@gmail.com", 
         "AgenciaViagem.com.br", "8:00-5:30");
     
@@ -58,7 +59,8 @@ Implementação atual:
         private int limite_escala_id = 3
         ...
     
-    Métodos que dependem das propriedades “adulto” e “tipo” para definir seus valores 
+Métodos que dependem das propriedades “adulto” e “tipo” para definir seus valores:
+
     public double ValorTotal() {
             double total_valor = getValor_ticket_adulto()
             System.out.println("O valor total dos tickets: R$" + total_valor );
@@ -116,6 +118,7 @@ Solução: Criar duas classes que implementam a interface IPassagemAerea, dessa 
     }
 
 Reserva_passagem_aerea.java
+
     public class Reserva_passagem_aerea extends Reserva {
         private IPassagemAerea PassagemAerea;
         ...
